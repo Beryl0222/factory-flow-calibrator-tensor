@@ -1,0 +1,218 @@
+{
+  "records": {
+    "groups": {
+      "A": {
+        "rev": 3,
+        "extent": [
+          -2,
+          2,
+          -1,
+          3
+        ],
+        "min_derivative": 0.02,
+        "min_fraction": 0.0001,
+        "params": "a"
+      },
+      "B": {
+        "rev": 5,
+        "extent": [
+          0,
+          10,
+          0,
+          12
+        ],
+        "min_derivative": 0.06,
+        "min_fraction": 0.0004,
+        "params": "b"
+      }
+    },
+    "bad_update": {
+      "group": "B",
+      "rev": 6,
+      "params": "br"
+    },
+    "param_order": [
+      "width",
+      "height",
+      "derivative"
+    ],
+    "requests": [
+      [
+        "f0",
+        "A",
+        "forward",
+        1.1999999998
+      ],
+      [
+        "f1",
+        "A",
+        "forward",
+        1.2
+      ],
+      [
+        "f2",
+        "A",
+        "forward",
+        -2.25
+      ],
+      [
+        "i0",
+        "B",
+        "inverse",
+        2.4000000001
+      ],
+      [
+        "i1",
+        "B",
+        "inverse",
+        13
+      ],
+      [
+        "i2",
+        "B",
+        "inverse",
+        0
+      ]
+    ],
+    "upstream": [
+      [
+        [
+          "i1",
+          1,
+          0.2
+        ],
+        [
+          "f1",
+          1,
+          -2
+        ],
+        [
+          "i0",
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          "f0",
+          4,
+          1
+        ],
+        [
+          "i2",
+          -1,
+          1
+        ],
+        [
+          "f2",
+          0.3,
+          -0.4
+        ]
+      ]
+    ]
+  },
+  "tensors": {
+    "a_width": {
+      "dtype": "float64",
+      "shape": [
+        3
+      ],
+      "values": [
+        0.8,
+        0.0005,
+        0.1995
+      ]
+    },
+    "a_height": {
+      "dtype": "float64",
+      "shape": [
+        3
+      ],
+      "values": [
+        0.4,
+        0.15,
+        0.45
+      ]
+    },
+    "a_derivative": {
+      "dtype": "float64",
+      "shape": [
+        4
+      ],
+      "values": [
+        0.8,
+        0.025,
+        5.9,
+        1.2
+      ]
+    },
+    "b_width": {
+      "dtype": "float64",
+      "shape": [
+        3
+      ],
+      "values": [
+        0.2,
+        0.7,
+        0.1
+      ]
+    },
+    "b_height": {
+      "dtype": "float64",
+      "shape": [
+        3
+      ],
+      "values": [
+        0.2,
+        0.1,
+        0.7
+      ]
+    },
+    "b_derivative": {
+      "dtype": "float64",
+      "shape": [
+        4
+      ],
+      "values": [
+        1.2,
+        1.1,
+        0.1,
+        2
+      ]
+    },
+    "br_width": {
+      "dtype": "float64",
+      "shape": [
+        3
+      ],
+      "values": [
+        0.2,
+        0.7,
+        0.1
+      ]
+    },
+    "br_height": {
+      "dtype": "float64",
+      "shape": [
+        3
+      ],
+      "values": [
+        0.2,
+        0.1,
+        0.7
+      ]
+    },
+    "br_derivative": {
+      "dtype": "float64",
+      "shape": [
+        4
+      ],
+      "values": [
+        1.2,
+        1.1,
+        -0.1,
+        2
+      ]
+    }
+  }
+}

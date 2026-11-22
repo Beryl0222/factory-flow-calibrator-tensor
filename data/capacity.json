@@ -1,0 +1,9 @@
+{
+  "rows": 360000,
+  "bins": 128,
+  "groups": 80,
+  "partition_rows": 3500,
+  "peak_scratch_bytes": 5242880,
+  "max_receipt_bytes": 4194304,
+  "seed": 1522
+}
