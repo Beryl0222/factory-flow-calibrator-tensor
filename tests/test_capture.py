@@ -22,3 +22,10 @@ class CaptureTests(unittest.TestCase):
             self.assertEqual(len(a[group+"_width"]) + 1, len(a[group+"_derivative"]))
         self.assertTrue(np.any(a["br_derivative"] < 0))
         self.assertEqual(len(r["requests"]), sum(map(len, r["upstream"])))
+        chain_rows = {row[0]: row for row in r["chain_rows"]}
+        for batch in r["chain_batches"]:
+            for row_id in batch["rows"]:
+                _, chain, _, values, mask = chain_rows[row_id]
+                self.assertEqual(len(values), len(mask))
+                self.assertTrue(all(len(stage["perm"]) == len(mask) for stage in r["chains"][chain]))
+        self.assertIn(r["replay_chain_upstream"]["upstream"], r)

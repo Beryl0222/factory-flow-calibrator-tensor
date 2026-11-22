@@ -148,6 +148,32 @@
             "B"
           ]
         }
+      ],
+      "sensor-bypass": [
+        {
+          "perm": [
+            2,
+            0,
+            1
+          ],
+          "groups": [
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "perm": [
+            1,
+            2,
+            0
+          ],
+          "groups": [
+            "A",
+            "B",
+            "A"
+          ]
+        }
       ]
     },
     "chain_rows": [
@@ -195,6 +221,36 @@
           1,
           1
         ]
+      ],
+      [
+        "mix3",
+        "sensor-bypass",
+        "forward",
+        [
+          1.2,
+          2.001,
+          1.1999999998
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      [
+        "mix4",
+        "sensor-bypass",
+        "forward",
+        [
+          1.2,
+          2.001,
+          1.1999999998
+        ],
+        [
+          1,
+          1,
+          1
+        ]
       ]
     ],
     "chain_upstream": [
@@ -225,7 +281,34 @@
         ],
         1.5
       ]
-    ]
+    ],
+    "chain_batches": [
+      {
+        "rows": [
+          "mix0",
+          "mix1",
+          "mix2"
+        ],
+        "group_versions": {
+          "A": 3,
+          "B": 5
+        }
+      },
+      {
+        "rows": [
+          "mix3",
+          "mix4"
+        ],
+        "group_versions": {
+          "A": 3,
+          "B": 6
+        }
+      }
+    ],
+    "replay_chain_upstream": {
+      "batch_index": 0,
+      "upstream": "chain_upstream"
+    }
   },
   "tensors": {
     "a_width": {
